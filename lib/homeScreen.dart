@@ -90,24 +90,20 @@ class _homeScreenState extends State<homeScreen> {
                           context: context,
                           builder: (BuildContext context) {
                             return AlertDialog(
-                              title: Text("Phone $index"),
+                              title: ListTile(
+                                leading: FlutterLogo(
+                                  size: 50,
+                                ),
+                                title: Text("Phone $index"),
+                                subtitle: Text('In Stock 4'),
+                                trailing: IconButton(
+                                  icon: Icon(Icons.share_outlined),
+                                  onPressed: () {},
+                                ),
+                              ),
                               content: Container(
                                 height: 200,
-                                child: Column(
-                                  children: [
-                                    FlutterLogo(
-                                      size: 50,
-                                    ),
-                                    SizedBox(
-                                      height: 30,
-                                    ),
-                                    Text("Price RS -  1$index,00.00 "),
-                                    SizedBox(
-                                      height: 30,
-                                    ),
-                                    Text("Srock $index 1")
-                                  ],
-                                ),
+                                child: Text('hello'),
                               ),
                               actions: <Widget>[
                                 TextButton(
